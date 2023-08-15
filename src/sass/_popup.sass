@@ -1,0 +1,149 @@
+.popup
+ width: 100%
+ height: 100%
+ top: 0
+ left: 0
+ display: flex
+ align-items: center
+ justify-content: center
+ position: fixed
+ opacity: 0
+ z-index: -10
+ pointer-events: none
+ &.open 
+  opacity: 1
+  z-index: 20
+  pointer-events: all
+ &-crypto
+  &.open 
+   z-index: 15
+  &-main 
+   >div
+    display: flex
+    align-items: center
+    &:first-child
+     p 
+      font-weight: 700
+    p 
+     border: 1px solid #fff
+     padding: 10px 0
+     width: 100%
+     text-align: center
+     font-size: 18px
+ &-bg 
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  cursor: pointer
+  background: #000
+  opacity: 0.5
+ &-main 
+  position: relative
+  z-index: 2
+  border-radius: 3px
+  background: #191E68
+  padding: 30px
+  color: #fff
+  width: 400px
+ &__title
+  margin-bottom: 20px
+  text-align: center
+  i
+   color: #E5BF00
+ &-form 
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  gap: 15px 10px
+  >label
+   &:nth-child(1),
+   &:nth-child(2)
+    flex: 1 1 0
+  &__label 
+   width: 100%
+   border: 2px solid #fff
+   position: relative
+   &::after 
+    content: 'Fill in the field'
+    display: block
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    padding: 2px 0
+    font-size: 12px
+    background: #ff0000
+    text-align: center
+    opacity: 0
+    transform: translateY(100%)
+    pointer-events: none
+    transition: opacity 0.2s, transform 0.4s
+   &.error 
+    &::after 
+     transform: translateY(0)
+     opacity: 1
+   p 
+    position: absolute
+    top: 0
+    transform: translateY(-50%)
+    left: 5px
+    background: #191E68
+    padding: 0 5px
+    font-size: 12px
+  &__input
+   width: 100%
+   background: transparent 
+   color: #fff
+   font-size: 16px
+   padding: 12px 8px
+  &__password
+   display: flex
+   width: 100%
+   align-items: stretch
+   &-btn 
+    width: 140px
+    border: 2px solid #fff 
+    font-size: 12px
+    color: $text-color
+    text-align: center 
+  &__btn 
+   width: 100%
+   background: #E5BF00
+   height: 50px
+   color: #fff 
+   font-size: 20px
+   text-align: center
+   font-weight: 700
+  &__terms 
+   display: flex
+   align-items: center
+   p 
+    font-size: 10px
+    transition: 0.4s
+   label 
+    border: 1px solid #fff 
+    --size: 16px
+    width: var(--size)
+    min-width: var(--size)
+    height: var(--size)
+    margin-right: 10px
+    display: flex
+    align-items: center
+    justify-content: center
+    border-radius: 2px
+    transition: 0.4s
+    img 
+     opacity: 0
+     transition: 0.4s
+    input 
+     display: none
+     &:checked 
+      ~img 
+       opacity: 1
+   &.error
+    p
+     color: #ff0000 
+    label 
+     border: 1px solid #ff0000

@@ -1,0 +1,124 @@
+$title-color: #000
+$text-color: #323232
+$cta-color: #096FFA
+$warning-color: #E81019
+ 
+@font-face 
+ font-family: Georgia
+ src: url(../../fonts/Georgia.ttf) format('ttf'), url('../../fonts/Georgia.woff2') format('woff2')
+ font-weight: 400
+
+@font-face 
+ font-family: Georgia
+ src: url(../../fonts/Georgia-bold.ttf) format('ttf'), url('../../fonts/Georgia-bold.woff2') format('woff2')
+ font-weight: 700
+
+*
+ box-sizing: border-box
+
+
+html
+ scroll-behavior: smooth
+
+
+body
+ font-family: 'Open Sans', sans-serif
+ color: #000
+ &.no-scroll
+  max-height: 100%
+  overflow: hidden !important
+
+a 
+ text-decoration: none
+ color: #000
+
+
+button
+ font-family: 'Open Sans', sans-serif
+ border: none
+ cursor: pointer
+ padding: 0
+
+
+input
+ font-family: 'Open Sans', sans-serif
+
+
+h1,h2,h3,h4,h5,h6
+ margin: 0
+
+h1
+ font-size: 44px
+
+h2
+ font-size: 36px
+
+h3 
+ font-size: 26px
+
+h4 
+ font-size: 16px
+
+h5 
+ font-size: 14px
+
+img
+ max-width: 100%
+
+
+.header 
+ width: 100%
+ height: 180px
+ background: url(../img/dest/header.jpg) center no-repeat
+ background-size: cover
+ margin-bottom: 30px
+ position: sticky
+ top: 0
+ z-index: 10
+
+.container
+ width: 1070px
+ margin: 0 auto
+
+.btn
+ width: 380px
+ padding: 25px 0px
+ border-radius: 5px
+ background: $cta-color
+ color: #fff 
+ text-align: center
+ font-size: 22px
+ font-weight: 700
+ text-transform: uppercase
+ display: block
+ margin: 0 auto
+ transition: 0.4s
+ &:hover 
+  background: #0038FF
+ &:active
+  background: #0750B5
+
+.links 
+ display: flex
+ align-items: center
+ gap: 0 10px
+ &__item 
+  --size: 30px
+  width: var(--size)
+  height: var(--size)
+  transition: 0.4s
+  img 
+   width: 100%
+   height: 100%
+   border-radius: 50%
+  &:hover
+   transform: scale(1.1)
+
+
+@import 'article'
+@import 'steps'
+@import 'deposit'
+@import 'comments'
+@import 'footer'
+@import 'popup'
+@import 'media'

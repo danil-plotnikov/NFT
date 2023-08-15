@@ -1,0 +1,85 @@
+.steps
+ padding-top: 20px
+ padding-bottom: 10px
+ &-header
+  color: $warning-color
+  margin-bottom: 50px
+  text-align: center
+ 
+ &-block 
+  display: flex
+  align-items: center
+  align-items: flex-start
+  gap: 10px
+  margin-bottom: 50px
+  &-3 
+   gap: 30px
+   .steps-info 
+    width: 410px
+    min-width: 410px
+  &__img 
+   border-radius: 50%
+   --size: 300px
+   width: var(--size)
+   height: var(--size)
+   filter: drop-shadow(0px 10px 50px rgba(0, 0, 0, 0.10))
+
+ &-info 
+  width: 355px
+  min-width: 355px
+  &__up
+   font-size: 14px
+   font-weight: 700
+   padding-top: 10px
+   letter-spacing: 0.42px
+   opacity: 0.5
+   margin-bottom: 10px
+  &__title
+   font-size: 26px
+   font-weight: 700
+   text-transform: uppercase
+   margin-bottom: 10px
+  &__text
+   font-family: 'Georgia'
+   line-height: 150%
+   font-size: 18px
+ &-side 
+  display: flex
+  gap: 0 5px
+  &__img
+   width: 190px
+   object-fit: cover
+
+ &-hint 
+  width: 180px
+  padding: 0px 8px
+  display: flex
+  justify-content: center
+  align-items: center
+  border-radius: 5px
+  border: 2px solid #01C65A
+  background: rgba(56, 255, 24, 0.02)
+  height: 100%
+  position: relative
+  &__text
+   font-size: 14px
+   color: $text-color
+   letter-spacing: 0.42px
+   font-weight: 700
+  &__img 
+   position: absolute
+   right: -18px
+   &-1 
+    bottom: 6.5px
+   &-2 
+    top: 27px
+   &-3 
+    bottom: 62px
+  &-wrap
+   display: flex
+   flex-direction: column
+   gap: 10px
+ &__arrow
+  display: block
+  width: 200px
+  margin: 0 auto 50px
